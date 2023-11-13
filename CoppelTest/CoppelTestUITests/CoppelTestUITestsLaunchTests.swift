@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import CoppelTest
 
 final class CoppelTestUITestsLaunchTests: XCTestCase {
 

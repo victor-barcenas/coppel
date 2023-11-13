@@ -20,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let loginSB = UIStoryboard(name: "Login", bundle: nil)
-        let loginViewController = loginSB.instantiateViewController(withIdentifier: "Login")
+        let loginViewController = LoginViewBuilder.build()
         window?.rootViewController = loginViewController
         window?.makeKeyAndVisible()
         
