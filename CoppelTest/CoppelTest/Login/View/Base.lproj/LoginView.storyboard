@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mAQ-kc-sxJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Light.otf">
+            <string>SFProDisplay-Light</string>
+        </array>
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginView" id="BYZ-38-t0r" customClass="LoginView" customModule="CoppelTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!Hola!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffp-0s-dLm">
+                                <rect key="frame" x="153.33333333333334" y="182" width="86.666666666666657" height="42"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿No tienes Cuenta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmX-Fr-GrA">
+                                <rect key="frame" x="120.66666666666669" y="514" width="152" height="21.666666666666629"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicia sesión con tu correo electrónico" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cq-fw-b8E">
+                                <rect key="frame" x="16" y="232" width="361" height="18"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electrónico*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8a-yf-MKF">
+                                <rect key="frame" x="32" y="285" width="329" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="WbW-0c-bEq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbp-kj-LT5" customClass="PasswordField" customModule="CoppelTest" customModuleProvider="target">
+                                <rect key="frame" x="32" y="359" width="329" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="mf7-kc-inO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olvidé mi contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g35-ee-kln">
+                                <rect key="frame" x="129.66666666666666" y="425" width="133.99999999999997" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RME-qU-46l">
+                                <rect key="frame" x="32" y="462" width="329" height="40"/>
+                                <color key="backgroundColor" name="blueMain"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="L7z-jd-vsW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Iniciar Sesión">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="opF-4b-qVb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvr-3P-IJO">
+                                <rect key="frame" x="32" y="547.66666666666663" width="329" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oOD-4Z-hqE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Crea tu cuenta"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coppel-logo" translatesAutoresizingMaskIntoConstraints="NO" id="6sk-vz-6PW">
+                                <rect key="frame" x="126.66666666666669" y="118" width="140" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="3OK-YG-JGE"/>
+                                    <constraint firstAttribute="width" constant="140" id="GW2-ls-jIF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wmX-Fr-GrA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Qm-sn-LK4"/>
+                            <constraint firstItem="Vbp-kj-LT5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="6tT-um-jje"/>
+                            <constraint firstItem="6sk-vz-6PW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="6yt-zY-fbw"/>
+                            <constraint firstItem="1Cq-fw-b8E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Be2-oe-EUM"/>
+                            <constraint firstItem="ffp-0s-dLm" firstAttribute="top" secondItem="6sk-vz-6PW" secondAttribute="bottom" constant="32" id="CjV-qf-gv4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bvr-3P-IJO" secondAttribute="trailing" constant="32" id="Cpl-8h-ec5"/>
+                            <constraint firstItem="ffp-0s-dLm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F6v-Or-Mjk"/>
+                            <constraint firstItem="Vbp-kj-LT5" firstAttribute="top" secondItem="N8a-yf-MKF" secondAttribute="bottom" constant="40" id="JCT-0l-5sP"/>
+                            <constraint firstItem="6sk-vz-6PW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JtZ-g4-YHy"/>
+                            <constraint firstItem="g35-ee-kln" firstAttribute="top" secondItem="Vbp-kj-LT5" secondAttribute="bottom" constant="32" id="PlO-Qq-XSZ"/>
+                            <constraint firstItem="RME-qU-46l" firstAttribute="top" secondItem="g35-ee-kln" secondAttribute="bottom" constant="20" id="QaF-xN-WQC"/>
+                            <constraint firstItem="1Cq-fw-b8E" firstAttribute="top" secondItem="ffp-0s-dLm" secondAttribute="bottom" constant="8" symbolic="YES" id="Qc2-UF-SeX"/>
+                            <constraint firstItem="RME-qU-46l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Xex-yR-F8d"/>
+                            <constraint firstItem="g35-ee-kln" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aBC-Kd-kt8"/>
+                            <constraint firstItem="wmX-Fr-GrA" firstAttribute="top" secondItem="RME-qU-46l" secondAttribute="bottom" constant="12" id="aJF-Xy-amD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Cq-fw-b8E" secondAttribute="trailing" constant="16" id="bFh-5a-KJ1"/>
+                            <constraint firstItem="bvr-3P-IJO" firstAttribute="top" secondItem="wmX-Fr-GrA" secondAttribute="bottom" constant="12" id="ceW-Aw-l2A"/>
+                            <constraint firstItem="bvr-3P-IJO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="dRg-cx-4zz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RME-qU-46l" secondAttribute="trailing" constant="32" id="hGq-No-y7j"/>
+                            <constraint firstItem="N8a-yf-MKF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="mIE-he-adn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N8a-yf-MKF" secondAttribute="trailing" constant="32" id="pXF-cb-G4P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vbp-kj-LT5" secondAttribute="trailing" constant="32" id="qpJ-vq-4LN"/>
+                            <constraint firstItem="N8a-yf-MKF" firstAttribute="top" secondItem="1Cq-fw-b8E" secondAttribute="bottom" constant="35" id="zd6-oJ-Hbt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NtG-Rh-moa"/>
+                    <connections>
+                        <outlet property="createAccountButton" destination="bvr-3P-IJO" id="p26-aq-Ja0"/>
+                        <outlet property="emailField" destination="N8a-yf-MKF" id="87g-ds-4vV"/>
+                        <outlet property="loginbutton" destination="RME-qU-46l" id="FAq-TH-CyC"/>
+                        <outlet property="passwordField" destination="Vbp-kj-LT5" id="unZ-Ou-8g6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.4122137404579" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="83W-XG-AOU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mAQ-kc-sxJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fcc-oi-61E">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="glW-ix-bTh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGc-fA-aKz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coppel-logo" width="495" height="102"/>
+        <namedColor name="blueMain">
+            <color red="0.078431372549019607" green="0.40000000000000002" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
