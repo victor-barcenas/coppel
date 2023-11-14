@@ -9,6 +9,8 @@ import UIKit
 
 final class LoginViewBuilder {
     
+    private init() {}
+    
     static func build() -> LoginView {
         let router = LoginRouter()
         let interactor = LoginInteractor()

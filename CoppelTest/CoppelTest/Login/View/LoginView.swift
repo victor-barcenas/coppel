@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginView: UIViewController {
+class LoginView: UIViewController, ActivityIndicatable {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: PasswordField!
@@ -28,6 +28,7 @@ class LoginView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        navigationController?.setNavigationBarHidden(true, animated: false)
         presenter.viewDidLoad(view: self)
     }
     
@@ -41,7 +42,7 @@ class LoginView: UIViewController {
         passwordField.addBottomBorder()
         loginbutton.roundCorners()
         createAccountButton.roundCorners()
-        createAccountButton.setBorder(color: UIColor.appColor(.blueMain)!)
+        createAccountButton.setBorder(color: UIColor.appColor(.blueMain))
     }
 
     @IBAction func loginAction(_ sender: Any) {
