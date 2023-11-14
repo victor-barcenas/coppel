@@ -8,9 +8,16 @@
 import UIKit
 
 final class LoginPresenter: LoginViewPresenterProtocol {
-    private weak var view: UIViewController?
-    private var router: LoginRouterProtocol
-    private var interactor: LoginInteractorProtocol
+    internal weak var view: UIViewController?
+    internal var router: LoginRouterProtocol
+    internal var interactor: LoginInteractorProtocol
+    
+    private var loginView: LoginView? {
+        guard let loginView = view as? LoginView else {
+            return nil
+        }
+        return loginView
+    }
     
     init(router: LoginRouterProtocol, interactor: LoginInteractorProtocol) {
         self.router = router
@@ -20,6 +27,7 @@ final class LoginPresenter: LoginViewPresenterProtocol {
     
     func viewDidLoad(view: UIViewController) {
         self.view = view
+        
     }
     
     func performLogin(email: String?, password: String?) {
@@ -28,16 +36,22 @@ final class LoginPresenter: LoginViewPresenterProtocol {
             view?.showMessage(LoginError.emptyCredetentials.localizedDescription)
             return
         }
+        loginView?.startLoading(with: "Inciando sesión")
         interactor.login(withEmail: email, password: password)
     }
 }
 
 extension LoginPresenter: LoginInteractorOutputProtocol {
     func loginSucceed(_ user: User) {
-        print(user)
+        guard let view = self.view else {
+            return
+        }
+        loginView?.stopLoading()
+        router.showHome(view: view)
     }
     
     func loginDidFail(with error: LoginError) {
+        loginView?.stopLoading()
         view?.showMessage(error.localizedDescription)
     }
     

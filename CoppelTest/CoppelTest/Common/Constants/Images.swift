@@ -10,6 +10,11 @@ import UIKit
 enum Images: String {
     case showPassword
     case hidePassword
+    case cart
+    case shipping
+    case shoppingBag
+    case store
+    case parallelogram
 }
 
 extension UIImage {

@@ -8,6 +8,10 @@
 import UIKit
 
 protocol LoginViewPresenterProtocol: AnyObject {
+    var view: UIViewController? { get set }
+    var router: LoginRouterProtocol { get set }
+    var interactor: LoginInteractorProtocol { get set }
+    
     func viewDidLoad(view: UIViewController)
 }
 
@@ -31,5 +35,5 @@ protocol LoginInteractorOutputProtocol: AnyObject {
 }
 
 protocol LoginRouterProtocol: AnyObject {
-    func showHome()
+    func showHome(view: UIViewController)
 }
