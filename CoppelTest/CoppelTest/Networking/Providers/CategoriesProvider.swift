@@ -8,7 +8,11 @@
 import Foundation
 import FirebaseFirestore
 
-final class CategoriesProvider: BaseProvider {
+protocol CategoriesProviderP {
+    func getCategories(_ completion: @escaping(Result<[Category], ProviderError>) -> Void)
+}
+
+final class CategoriesProvider: BaseProvider, CategoriesProviderP {
     
     static let name = "categorías"
     

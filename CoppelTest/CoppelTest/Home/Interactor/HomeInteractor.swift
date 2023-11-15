@@ -8,9 +8,9 @@
 import Foundation
 
 final class HomeInteractorInput: HomeInteractorInputProtocol {
-    var mostSelledProvider: MostSelledProvider
-    var brandsProvider: BrandProvider
-    var categoriesProvider: CategoriesProvider
+    var categoriesProvider: CategoriesProviderP
+    var mostSelledProvider: MostSelledProviderP
+    var brandsProvider: BrandProviderP
     
     init() {
         categoriesProvider = CategoriesProvider()
