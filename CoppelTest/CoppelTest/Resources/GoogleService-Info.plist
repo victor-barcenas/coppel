@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyC6Y0eWEsGreqH6tjioUwAz4rhljhlYsEM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>716918320893</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.victorbarcenas.CoppelTest</string>
+	<key>PROJECT_ID</key>
+	<string>coppel-test-bc31b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>coppel-test-bc31b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:716918320893:ios:58e1a4fd67f6594e551894</string>
+</dict>
+</plist>
