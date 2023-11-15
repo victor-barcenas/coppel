@@ -7,7 +7,11 @@
 
 import FirebaseFirestore
 
-final class MostSelledProvider: BaseProvider {
+protocol MostSelledProviderP {
+    func getMostSelled(_ completion: @escaping(Result<[MostSelled], ProviderError>) -> Void)
+}
+
+final class MostSelledProvider: BaseProvider, MostSelledProviderP {
     
     static let name = "más vendidos"
     
@@ -15,7 +19,7 @@ final class MostSelledProvider: BaseProvider {
         db.collection(Database.mostSelled).getDocuments { snapshot, err in
             if let err = err {
                 print("Error getting documents: \(err)")
-                completion(.failure(.downloadError(CategoriesProvider.name)))
+                completion(.failure(.downloadError(MostSelledProvider.name)))
             } else {
                 var mostSelledList: [MostSelled] = []
                 for document in snapshot!.documents {

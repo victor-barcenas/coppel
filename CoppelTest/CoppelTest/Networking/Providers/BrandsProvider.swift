@@ -7,7 +7,11 @@
 
 import FirebaseFirestore
 
-final class BrandProvider: BaseProvider {
+protocol BrandProviderP {
+    func getBrands(_ completion: @escaping(Result<[Brand], ProviderError>) -> Void)
+}
+
+final class BrandProvider: BaseProvider, BrandProviderP {
     
     static let name = "marcas"
     

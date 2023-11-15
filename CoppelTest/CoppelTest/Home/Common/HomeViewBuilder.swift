@@ -7,11 +7,15 @@
 
 import UIKit
 
-final class HomeViewBuilder {
+protocol HomeViewBuilderP {
+    static func build() -> UIViewController
+}
+
+final class HomeViewBuilder: HomeViewBuilderP {
     
     private init() {}
     
-    static func build() -> HomeView {
+    static func build() -> UIViewController {
         let router = HomeRouter()
         let interactor = HomeInteractor()
         let presenter = HomePresenter(router: router, interactor: interactor)

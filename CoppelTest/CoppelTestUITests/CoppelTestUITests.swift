@@ -13,8 +13,8 @@ final class CoppelTestUITests: XCTestCase {
     var expectation: XCTestExpectation?
     var user: User?
     
-    class MockAuthManager: AuthManager {
-        override func login(withEmail email: String, password: String,
+    class MockAuthManager: AuthProviderP {
+        func login(withEmail email: String, password: String,
                    completion: @escaping(Result<User, LoginError>) -> Void) {
             if email == "user@test.com" &&  password == "Password123*" {
                 completion(.success(User(email: email)))
@@ -26,15 +26,15 @@ final class CoppelTestUITests: XCTestCase {
     
     final class MockLoginInteractorInput: LoginInteractorInputProtocol {
         
-        var authManager: AuthManager
+        var authProvider: AuthProviderP
         
         init() {
-            authManager = MockAuthManager()
+            authProvider = MockAuthManager()
         }
         
         func login(withEmail email: String, password: String,
                    completion: @escaping(Result<User, LoginError>) -> Void) {
-            authManager.login(withEmail: email, password: password) { result in
+            authProvider.login(withEmail: email, password: password) { result in
                 completion(result)
             }
         }
@@ -66,8 +66,10 @@ final class CoppelTestUITests: XCTestCase {
     }
     
     final class MockLoginPresenter: LoginViewPresenterProtocol {
-        private var router: LoginRouterProtocol
-        private var interactor: LoginInteractorProtocol
+        var view: UIViewController?
+        
+        internal var router: LoginRouterProtocol
+        internal var interactor: LoginInteractorProtocol
         
         init(router: LoginRouterProtocol, interactor: LoginInteractorProtocol) {
             self.router = router

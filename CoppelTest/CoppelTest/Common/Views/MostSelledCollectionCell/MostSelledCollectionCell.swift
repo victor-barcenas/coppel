@@ -130,7 +130,7 @@ final class MostSelledCollectionCell: UICollectionViewCell, BaseCollectionCell {
         let offerPriceNumber = NSNumber(floatLiteral: Double(offerPrice) ?? 0.0)
         if let formattedAmount = formatter.string(from: priceNumber) {
             self.price.text = "\(formattedAmount)"
-            self.price.textColor = offerPriceNumber.doubleValue > 0 ? UIColor.offerTitleRed : .black
+            self.price.textColor = offerPriceNumber.doubleValue > 0 ? UIColor.appColor(.offerTitleRed) : .black
         }
     }
     

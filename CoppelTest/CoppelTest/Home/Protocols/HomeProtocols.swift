@@ -25,9 +25,9 @@ protocol HomeInteractorProtocol {
 }
 
 protocol HomeInteractorInputProtocol: AnyObject {
-    var categoriesProvider: CategoriesProvider { get set }
-    var mostSelledProvider: MostSelledProvider { get set }
-    var brandsProvider: BrandProvider { get set }
+    var categoriesProvider: CategoriesProviderP { get set }
+    var mostSelledProvider: MostSelledProviderP { get set }
+    var brandsProvider: BrandProviderP { get set }
     
     func getCategories(_ completion: @escaping(Result<[Category], ProviderError>) -> Void)
     func getBrands(_ completion: @escaping(Result<[Brand], ProviderError>) -> Void)

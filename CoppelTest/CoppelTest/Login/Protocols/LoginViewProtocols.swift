@@ -23,7 +23,7 @@ protocol LoginInteractorProtocol {
 }
 
 protocol LoginInteractorInputProtocol: AnyObject {
-    var authManager: AuthManager { get set }
+    var authProvider: AuthProviderP { get set }
     
     func login(withEmail email: String, password: String,
                completion: @escaping(Result<User, LoginError>) -> Void)

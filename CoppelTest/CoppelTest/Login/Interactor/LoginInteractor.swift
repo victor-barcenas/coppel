@@ -8,15 +8,15 @@
 import Foundation
 
 final class LoginInteractorInput: LoginInteractorInputProtocol {
-    var authManager: AuthManager
+    var authProvider: AuthProviderP
     
     init() {
-        authManager = AuthManager()
+        authProvider = AuthProvider()
     }
     
     func login(withEmail email: String, password: String,
                completion: @escaping(Result<User, LoginError>) -> Void) {
-        authManager.login(withEmail: email, password: password) { result in
+        authProvider.login(withEmail: email, password: password) { result in
             completion(result)
         }
     }
