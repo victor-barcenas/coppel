@@ -14,7 +14,6 @@
 		E43167ED2B026B0A00C3974A /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44663832B000BE200F67F83 /* LoginInteractor.swift */; };
 		E43167EE2B026B1400C3974A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44663852B000BFA00F67F83 /* LoginPresenter.swift */; };
 		E43167F02B026B2C00C3974A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44663892B000C2400F67F83 /* LoginRouter.swift */; };
-		E43167F12B026E0900C3974A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44663922B001FFC00F67F83 /* UIViewController.swift */; };
 		E44663262AFFCCD300F67F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44663252AFFCCD300F67F83 /* AppDelegate.swift */; };
 		E446632A2AFFCCD300F67F83 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44663292AFFCCD300F67F83 /* LoginView.swift */; };
 		E446632D2AFFCCD300F67F83 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E446632B2AFFCCD300F67F83 /* LoginView.storyboard */; };
@@ -40,13 +39,19 @@
 		E446638C2B000C4700F67F83 /* LoginViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446638B2B000C4700F67F83 /* LoginViewProtocols.swift */; };
 		E446638F2B00100C00F67F83 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446638E2B00100C00F67F83 /* AuthManager.swift */; };
 		E44663912B0012F000F67F83 /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44663902B0012F000F67F83 /* LoginError.swift */; };
-		E44663932B001FFC00F67F83 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44663922B001FFC00F67F83 /* UIViewController.swift */; };
+		E44663932B001FFC00F67F83 /* UIViewController+ShowMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44663922B001FFC00F67F83 /* UIViewController+ShowMessage.swift */; };
 		E44663962B00219C00F67F83 /* LoginViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44663952B00219C00F67F83 /* LoginViewBuilder.swift */; };
 		E46C9AB82B03B75C00FC9D2C /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C9AB72B03B75C00FC9D2C /* BaseCollectionView.swift */; };
 		E46C9ABB2B03C73700FC9D2C /* BrandsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C9ABA2B03C73700FC9D2C /* BrandsCollectionCell.swift */; };
 		E46C9ABD2B03CF9E00FC9D2C /* NavController+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C9ABC2B03CF9E00FC9D2C /* NavController+Transition.swift */; };
 		E46C9ABF2B03D9D500FC9D2C /* ActivityIndicatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C9ABE2B03D9D500FC9D2C /* ActivityIndicatable.swift */; };
 		E46C9AC12B03D9FE00FC9D2C /* String+Width.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C9AC02B03D9FE00FC9D2C /* String+Width.swift */; };
+		E46C9AC42B04144C00FC9D2C /* RealtimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C9AC32B04144C00FC9D2C /* RealtimeProvider.swift */; };
+		E46C9AC62B041DA200FC9D2C /* RealTimeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C9AC52B041DA200FC9D2C /* RealTimeKeys.swift */; };
+		E46C9AC82B0427EA00FC9D2C /* MaintenanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C9AC72B0427EA00FC9D2C /* MaintenanceView.swift */; };
+		E46C9ACB2B04280200FC9D2C /* MaintenanceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E46C9ACA2B04280200FC9D2C /* MaintenanceView.storyboard */; };
+		E46C9ACE2B042D7300FC9D2C /* UIWindow+TopMostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C9ACD2B042D7300FC9D2C /* UIWindow+TopMostController.swift */; };
+		E46C9AD02B04637B00FC9D2C /* PromoBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C9ACF2B04637B00FC9D2C /* PromoBanner.swift */; };
 		E4AFC7AC2B0278230053EEF0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E4AFC7AB2B0278230053EEF0 /* FirebaseAuth */; };
 		E4AFC7AE2B0278230053EEF0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E4AFC7AD2B0278230053EEF0 /* FirebaseFirestore */; };
 		E4AFC7B02B0278230053EEF0 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = E4AFC7AF2B0278230053EEF0 /* FirebaseRemoteConfig */; };
@@ -121,13 +126,19 @@
 		E446638B2B000C4700F67F83 /* LoginViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocols.swift; sourceTree = "<group>"; };
 		E446638E2B00100C00F67F83 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		E44663902B0012F000F67F83 /* LoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
-		E44663922B001FFC00F67F83 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		E44663922B001FFC00F67F83 /* UIViewController+ShowMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowMessage.swift"; sourceTree = "<group>"; };
 		E44663952B00219C00F67F83 /* LoginViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewBuilder.swift; sourceTree = "<group>"; };
 		E46C9AB72B03B75C00FC9D2C /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		E46C9ABA2B03C73700FC9D2C /* BrandsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsCollectionCell.swift; sourceTree = "<group>"; };
 		E46C9ABC2B03CF9E00FC9D2C /* NavController+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavController+Transition.swift"; sourceTree = "<group>"; };
 		E46C9ABE2B03D9D500FC9D2C /* ActivityIndicatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatable.swift; sourceTree = "<group>"; };
 		E46C9AC02B03D9FE00FC9D2C /* String+Width.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Width.swift"; sourceTree = "<group>"; };
+		E46C9AC32B04144C00FC9D2C /* RealtimeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeProvider.swift; sourceTree = "<group>"; };
+		E46C9AC52B041DA200FC9D2C /* RealTimeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeKeys.swift; sourceTree = "<group>"; };
+		E46C9AC72B0427EA00FC9D2C /* MaintenanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceView.swift; sourceTree = "<group>"; };
+		E46C9ACA2B04280200FC9D2C /* MaintenanceView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MaintenanceView.storyboard; sourceTree = "<group>"; };
+		E46C9ACD2B042D7300FC9D2C /* UIWindow+TopMostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+TopMostController.swift"; sourceTree = "<group>"; };
+		E46C9ACF2B04637B00FC9D2C /* PromoBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoBanner.swift; sourceTree = "<group>"; };
 		E4D900DC2B028A5100045FFD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E4D900DE2B028A5D00045FFD /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		E4D900E52B028E4600045FFD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -339,10 +350,11 @@
 			isa = PBXGroup;
 			children = (
 				E46C9AC22B03DA0100FC9D2C /* String */,
+				E44663922B001FFC00F67F83 /* UIViewController+ShowMessage.swift */,
 				E446636A2AFFDBA900F67F83 /* UIView.swift */,
-				E44663922B001FFC00F67F83 /* UIViewController.swift */,
 				E4D900F02B029FD200045FFD /* UIImageView+Download.swift */,
 				E46C9ABC2B03CF9E00FC9D2C /* NavController+Transition.swift */,
+				E46C9ACD2B042D7300FC9D2C /* UIWindow+TopMostController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -392,6 +404,15 @@
 				E46C9AC02B03D9FE00FC9D2C /* String+Width.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		E46C9AC92B0427F100FC9D2C /* Maintenance */ = {
+			isa = PBXGroup;
+			children = (
+				E46C9AC72B0427EA00FC9D2C /* MaintenanceView.swift */,
+				E46C9ACA2B04280200FC9D2C /* MaintenanceView.storyboard */,
+			);
+			path = Maintenance;
 			sourceTree = "<group>";
 		};
 		E4D900D52B0289EE00045FFD /* Home */ = {
@@ -459,6 +480,7 @@
 		E4D900E32B028D8A00045FFD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E46C9AC92B0427F100FC9D2C /* Maintenance */,
 				E46C9AB72B03B75C00FC9D2C /* BaseCollectionView.swift */,
 				E46C9AB92B03C71C00FC9D2C /* BrandsCollectionCell */,
 				E4D901092B02F95C00045FFD /* MostSelledCollectionCell */,
@@ -476,6 +498,7 @@
 				E4D900E52B028E4600045FFD /* Category.swift */,
 				E4D901022B02D86B00045FFD /* MostSelled.swift */,
 				E4D901042B02D87900045FFD /* Brand.swift */,
+				E46C9ACF2B04637B00FC9D2C /* PromoBanner.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -495,6 +518,7 @@
 				E4D900F22B02C15300045FFD /* CategoriesProvider.swift */,
 				E4D900FD2B02D63D00045FFD /* MostSelledProvider.swift */,
 				E4D901062B02D98800045FFD /* BrandsProvider.swift */,
+				E46C9AC32B04144C00FC9D2C /* RealtimeProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -520,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				E4D901132B02FC1800045FFD /* TagType.swift */,
+				E46C9AC52B041DA200FC9D2C /* RealTimeKeys.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -641,6 +666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4D900DF2B028A5D00045FFD /* HomeView.storyboard in Resources */,
+				E46C9ACB2B04280200FC9D2C /* MaintenanceView.storyboard in Resources */,
 				E44663632AFFD9E300F67F83 /* SF-Pro-Display-Medium.otf in Resources */,
 				E44663642AFFD9E300F67F83 /* SF-Pro-Display-Bold.otf in Resources */,
 				E44663822B000AE800F67F83 /* GoogleService-Info.plist in Resources */,
@@ -674,7 +700,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E44663932B001FFC00F67F83 /* UIViewController.swift in Sources */,
+				E44663932B001FFC00F67F83 /* UIViewController+ShowMessage.swift in Sources */,
 				E46C9ABB2B03C73700FC9D2C /* BrandsCollectionCell.swift in Sources */,
 				E4D901072B02D98800045FFD /* BrandsProvider.swift in Sources */,
 				E4D900F52B02C26C00045FFD /* ProviderError.swift in Sources */,
@@ -682,13 +708,17 @@
 				E4D900EA2B0297EF00045FFD /* Strings.swift in Sources */,
 				E44663962B00219C00F67F83 /* LoginViewBuilder.swift in Sources */,
 				E44663862B000BFA00F67F83 /* LoginPresenter.swift in Sources */,
+				E46C9AC62B041DA200FC9D2C /* RealTimeKeys.swift in Sources */,
 				E4D9010F2B02FB9100045FFD /* TagView.swift in Sources */,
 				E446638F2B00100C00F67F83 /* AuthManager.swift in Sources */,
 				E4D900E82B028F9F00045FFD /* CategoryCollectionCell.swift in Sources */,
 				E4D900E62B028E4600045FFD /* Category.swift in Sources */,
 				E44663912B0012F000F67F83 /* LoginError.swift in Sources */,
+				E46C9AC42B04144C00FC9D2C /* RealtimeProvider.swift in Sources */,
 				E44663742AFFEA1600F67F83 /* Images.swift in Sources */,
 				E446632A2AFFCCD300F67F83 /* LoginView.swift in Sources */,
+				E46C9AD02B04637B00FC9D2C /* PromoBanner.swift in Sources */,
+				E46C9ACE2B042D7300FC9D2C /* UIWindow+TopMostController.swift in Sources */,
 				E4D901182B030EC200045FFD /* String+StrikeThrough.swift in Sources */,
 				E4D900FE2B02D63D00045FFD /* MostSelledProvider.swift in Sources */,
 				E4D901052B02D87900045FFD /* Brand.swift in Sources */,
@@ -710,6 +740,7 @@
 				E446636B2AFFDBA900F67F83 /* UIView.swift in Sources */,
 				E46C9ABF2B03D9D500FC9D2C /* ActivityIndicatable.swift in Sources */,
 				E4D900F12B029FD200045FFD /* UIImageView+Download.swift in Sources */,
+				E46C9AC82B0427EA00FC9D2C /* MaintenanceView.swift in Sources */,
 				E4D900FA2B02C5C900045FFD /* HomePresenter.swift in Sources */,
 				E4D900F82B02C4AA00045FFD /* HomeProtocols.swift in Sources */,
 				E4D900EF2B0298BF00045FFD /* HomeRouter.swift in Sources */,
@@ -733,7 +764,6 @@
 				E43167EE2B026B1400C3974A /* LoginPresenter.swift in Sources */,
 				E43167EC2B026AFB00C3974A /* LoginViewProtocols.swift in Sources */,
 				E44663472AFFCCD600F67F83 /* CoppelTestUITests.swift in Sources */,
-				E43167F12B026E0900C3974A /* UIViewController.swift in Sources */,
 				E43167ED2B026B0A00C3974A /* LoginInteractor.swift in Sources */,
 				E43167EA2B026AC600C3974A /* AuthManager.swift in Sources */,
 				E43167EB2B026AD900C3974A /* LoginError.swift in Sources */,

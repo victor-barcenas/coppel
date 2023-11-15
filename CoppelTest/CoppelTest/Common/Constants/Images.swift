@@ -14,7 +14,8 @@ enum Images: String {
     case shipping
     case shoppingBag
     case store
-    case parallelogram
+    case maintenance
+    case appUpdate
 }
 
 extension UIImage {
